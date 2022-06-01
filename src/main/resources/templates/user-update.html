@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update user</title>
+</head>
+<body>
+<form action="#" th:method="PATCH" th:action="@{/user-update}" th:object="${user}">
+    <label for="id">UserId</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="UserId">
+    <br>
+    <label for="firstName">Enter name</label>
+    <input type="text" th:field="*{firstName}" id="firstName" required/>
+    <br>
+    <label for="lastName">Enter surname</label>
+    <input type="text" th:field="*{lastName}" id="lastName"/>
+    <br>
+    <label for="age">Enter age</label>
+    <input type="number" min="0" max="127" th:field="*{age}" id="age">
+    <br>
+    <label for="email">Enter email</label>
+    <input type="text" th:field="*{email}" id="email" required/>
+    <br>
+    <input type="submit" class="buttonEdit" value="Edit user"/>
+
+</form>
+</body>
+</html>
