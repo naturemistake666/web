@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class UserService {
+public class UserService implements ServiceU {
 
     private final UserRepository userRepository;
 
@@ -21,12 +21,14 @@ public class UserService {
         return userRepository.getOne(id);
     }
 
+
     public List<User> findAll() {
         return userRepository.findAll();
     }
 
-    public User saveUser(User user) {
-        return userRepository.save(user);
+
+    public void saveUser(User user) {
+        userRepository.save(user);
     }
 
     public void deleteById(Long id) {

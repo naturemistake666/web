@@ -4,7 +4,7 @@ import com.webUser.web.model.User;
 
 import java.util.List;
 
-public interface Service {
+public interface ServiceU {
 
     Object findById(Long id);
 
